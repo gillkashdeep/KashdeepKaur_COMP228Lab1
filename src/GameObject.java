@@ -5,7 +5,7 @@ public class GameObject {
     String state;
     String rotation;
 
-    public GameObject(String velocity, String state, String rotation) {
+    public GameObject(int center, String velocity, String state, String rotation) {
         this.velocity = velocity;
         this.state = state;
         this.rotation = rotation;
@@ -41,5 +41,10 @@ public class GameObject {
 
     public void setRotation(String rotation) {
         this.rotation = rotation;
+    }
+
+    public String getObjectInfo() {
+
+        return "ObjectCenter-" + center + "  ," + "Velocity-" + velocity + "  ," + "State-" + state + "Rotation" + "  ," + rotation;
     }
 }
