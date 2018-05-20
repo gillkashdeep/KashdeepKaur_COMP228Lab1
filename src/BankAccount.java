@@ -28,12 +28,34 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public BankAccount (String accountNumber, String name, Double balance)
+    public BankAccount (String accountNumber, String name, double balance)
     {
         this.accountNumber = accountNumber;
         this.name = name;
         this.balance = balance;
 
     }
+    public String getAccountInfo(){
 
+        return "Account Number-" + accountNumber + "  ," + "Name-" + name + "  ," + "Account Balance-" + balance;
+
+    }
+
+    public void withdrawAmount(double withdrawBalance)
+    {
+        if (withdrawBalance > 0.0 && withdrawBalance <= balance)
+            balance -= withdrawBalance;
+    }
+
+    public void  depositeAmount(double depositeBalance)
+    {
+
+        if(depositeBalance > 0.0)
+        {
+            balance += depositeBalance;
+        }
+
+
+
+    }
 }
